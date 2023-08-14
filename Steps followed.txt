@@ -1,0 +1,37 @@
+1. Create a repo (without readme)
+2. Generate ssh key:
+	ssh-keygen -t rsa -b 4096 -C "abhishek23208.iiitd.ac.in"
+[Key saved in " /c/Users/DELL/AppData/Roaming/SPB_16.6/.ssh/id_rsa.pub "]
+3. Adding your SSH key to the ssh-agent
+	eval "$(ssh-agent -s)"
+	ssh-add "/c/Users/DELL/AppData/Roaming/SPB_16.6/.ssh/id_rsa.pub"
+4. Now add the ssh key saved in this file to the github repo 'add ssh key' option.
+
+5. Add git username: git config --global --replace-all user.name "abhishek23208"
+6. Add git emailid: git config --global --replace-all user.email "abhishek23208@iiitd.ac.in"
+
+----------After creating a new github repo without readme file-----------------------------------
+
+7. Check git status in bash => git status
+8. Go to the desired local repo folder in bash => cd "C:\Users\DELL\Desktop\IIITD Books and material\1st semester\OOPD\Assignment"
+9. Make a readme file in local folder => echo "# IIITD_OOPD" >> README.md
+10. Initiliaze git in that folder => git init
+11. Add and commit the readme file to the 'staged' level in local repo.
+	=> 	git add README.md		( Makes the file track and states the file that will be commited)
+	=>	 git commit -m "first commit"     (Changes saved on local repo)
+
+
+12. Change/create a new 'main/master' branch:  It renames the default branch of your local repository from master (or any other existing name) to main. In many open-source projects, there has been a movement to replace the term "master" with more inclusive terminology like "main."
+	=>	git branch -M main
+
+13. Add a remote named origin to your local repository: This remote points to a GitHub repository located at "git@github.com:abhishek23208/IIITD_OOPD.git". The URL is the SSH URL of the remote repository.
+	=>	git remote add origin git@github.com:abhishek23208/IIITD_OOPD.git
+
+14. Pushe local main branch to the remote repository named 'origin': The -u flag (short for --set-upstream) establishes a tracking relationship between your local main branch and the remote main branch. This means that in the future, when you use git pull or git push, Git will know where to pull from or push to without needing to specify the branch every time.
+	=>	git push -u origin main
+
+
+NOTE: You can create a '.gitignore' file to ignore any file or folder from uploading.
+
+
+	
