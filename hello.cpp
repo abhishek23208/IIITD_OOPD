@@ -16,5 +16,9 @@ int main()
     {
         cout<<str[i];
     }
+    for (int i=0;str[i]!='\0';i++)
+    {
+        cout<<i<<":"<<str[i]<<"\n";
+    }
     return 0;
 }
